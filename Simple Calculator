@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stdio.h>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    cout << setw(40) << "***WELCOME TO THE SIMPLE CALCULATOR PROGRAM***" << endl;
+    int num1, num2, choice;
+    cout << "1.Addition 2.Substraction 3.Multiplication 4.Division 5.Mod" << endl;
+    do
+    {
+        cout << "Enter your choice (1-5): ";
+        cin >> choice;
+
+        if (choice < 1 || choice > 5)
+        {
+            cout << "Invalid choice. Please enter a number between 1 and 5." << endl;
+        }
+    } while (choice < 1 || choice > 5);
+    cout << "\nEnter the value of Num1:";
+    cin >> num1;
+    cout << "Enter the value of Num2:";
+    cin >> num2;
+    switch (choice)
+    {
+    case 1:
+        cout << "\nAddition of Two Number:" << num1 + num2 << endl;
+        break;
+    case 2:
+        cout << "\nSubstracted Value of Two Number:" << num1 - num2 << endl;
+        break;
+    case 3:
+        cout << "\nMultiplication of Two Number:" << num1 * num2 << endl;
+        break;
+    case 4:
+        cout << "\nDivision of Two Number:" << num1 / num2 << endl;
+        break;
+    case 5:
+        cout << "\nMod of Two Number:" << num1 % num2 << endl;
+        break;
+    default:
+        cout << "Wrong Choice Enter :<" << endl;
+    }
+    cout << "Thank You. :>" << endl;
+    return 0;
+}
